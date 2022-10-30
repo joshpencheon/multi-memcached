@@ -36,7 +36,7 @@ Or access via UDP rather than TCP:
 docker run -it \
   -p 12345-12349:12345-12349/udp \
   ghcr.io/joshpencheon/multi-memcached:latest \
-  --U 12345 --port 0
+  --udp-port 12345 --port 0
 ```
 
 ## Building
