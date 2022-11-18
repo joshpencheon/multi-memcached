@@ -9,5 +9,7 @@ USER memcache
 
 ARG total_instances=5
 ENV TOTAL_INSTANCES=$total_instances
+ENV STARTING_TCP_PORT=11211
+ENV STARTING_UDP_PORT=0
 
 COPY docker-entrypoint.sh /usr/local/bin/
