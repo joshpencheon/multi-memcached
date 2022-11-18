@@ -25,18 +25,19 @@ You can change the starting port:
 
 ```
 docker run -it \
+  -e STARTING_TCP_PORT=12345 \
   -p 12345-12349:12345-12349 \
-  ghcr.io/joshpencheon/multi-memcached:latest \
-  --port 12345
+  ghcr.io/joshpencheon/multi-memcached:latest
 ```
 
 Or access via UDP rather than TCP:
 
 ```
 docker run -it \
+  -e STARTING_UDP_PORT=12345 \
+  -e STARTING_TCP_PORT=0 \
   -p 12345-12349:12345-12349/udp \
-  ghcr.io/joshpencheon/multi-memcached:latest \
-  --udp-port 12345 --port 0
+  ghcr.io/joshpencheon/multi-memcached:latest
 ```
 
 ## Building
